@@ -13,4 +13,4 @@ $ npm install
 $ npm start
 ```
 
-#### Go to `localhost:8000` on your address bar to see the application running on your  web browser
+#### Go to `localhost:3000` on your address bar to see the application running on your  web browser
