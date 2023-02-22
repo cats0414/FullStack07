@@ -17,10 +17,22 @@
                 <div class="col-3">
                     <img src="/assets/user.jpg" alt="" class="img-fluid"/>
                     <div class="row" id="myDIV">
-                      <button class="btn-action active">Button 1</button>
-                      <button class="btn-action">Button 2</button>
-                      <button class="btn-action">Button 3</button>
-                      <button class="btn-action">Button 4</button>
+                        <div class="row">
+                            <button class="btn-actionm activemain col-10">Button 1</button>
+                            <button class="btn-action active col-2 secondary"><img class="img-fluid"src="/assets/download.png" alt=""/></button>
+                        </div>
+                        <div class="row">
+                            <button class="btn-actionm  col-10">Button 1</button>
+                            <button class="btn-action  col-2 secondary"><img class="img-fluid"src="/assets/download.png" alt=""/></button>
+                        </div>
+                        <div class="row">
+                            <button class="btn-actionm  col-10">Button 1</button>
+                            <button class="btn-action  col-2 secondary"><img class="img-fluid"src="/assets/download.png" alt=""/></button>
+                        </div>
+                        <div class="row">
+                            <button class="btn-actionm col-10">Button 1</button>
+                            <button class="btn-action col-2 secondary"><img class="img-fluid"src="/assets/download.png" alt=""/></button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-1"></div>
@@ -38,8 +50,16 @@
         var btnContainer = document.getElementById("myDIV");
         // Get all buttons with class="btn" inside the container
         var btns = btnContainer.getElementsByClassName("btn-action");
-
+        var btnsm = btnContainer.getElementsByClassName("btn-actionm");
         // Loop through the buttons and add the active class to the current/clicked button
+        for (var i = 0; i < btnsm.length; i++) {
+        btnsm[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("activemain");
+            current[0].className = current[0].className.replace(" activemain", "");
+            this.className += " activemain";
+            
+        });
+        }
         for (var i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function() {
             var current = document.getElementsByClassName("active");
