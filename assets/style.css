@@ -1,0 +1,22 @@
+body{
+    background-color:whitesmoke;
+}
+#margin{
+    margin: 5% 10% 5% 10%;
+}
+.col-3{
+    background-color: white;
+}
+.col-8{
+    background-color: white;
+}
+.btn-action{
+    margin-top: 1%;
+    padding: 3% 0 3% 0;
+    text-align: left;
+    vertical-align:middle;
+    border-color: transparent;
+}
+.active , .btn-action:hover{
+    background-color: #ffc107;
+}
